@@ -1,17 +1,20 @@
 # RAG PDF Chatbot
 
-A beginner-friendly Retrieval-Augmented Generation (RAG) project using LangChain, FAISS, and Hugging Face embeddings.
+A beginner-friendly Retrieval-Augmented Generation (RAG) project built using LangChain, FAISS, and Hugging Face embeddings.
+
+This project loads PDF documents, converts them into embeddings, stores them in a vector database, and retrieves relevant chunks using semantic similarity search.
 
 ---
 
 # Features
 
 * PDF document loading
-* Text chunking
+* Recursive text chunking
 * Hugging Face embeddings
 * FAISS vector database
 * Semantic similarity search
-* Modular project structure
+* Modular architecture
+* Beginner-friendly RAG pipeline
 
 ---
 
@@ -20,11 +23,9 @@ A beginner-friendly Retrieval-Augmented Generation (RAG) project using LangChain
 ```bash
 RAG/
 │
-├── app.py
-│
+├── .env/
 ├── data/
-│   └── ml_book.pdf
-│
+├── notebooks/
 ├── src/
 │   ├── loader.py
 │   ├── splitter.py
@@ -32,6 +33,8 @@ RAG/
 │   ├── vectorstore.py
 │   └── retriever.py
 │
+├── vectorstore/
+├── app.py
 ├── requirements.txt
 └── README.md
 ```
@@ -73,6 +76,12 @@ venv\Scripts\activate
 ## Install Dependencies
 
 ```bash
+pip install -r requirements.txt
+```
+
+Or manually install:
+
+```bash
 pip install langchain
 pip install langchain-community
 pip install langchain-huggingface
@@ -86,7 +95,7 @@ pip install pypdf
 
 # Add Your PDF
 
-Place your PDF file inside the `data` folder.
+Place your PDF inside the `data` folder.
 
 Example:
 
@@ -148,8 +157,8 @@ Supervised learning is a type of machine learning...
 * Build chatbot interface
 * Add conversational memory
 * Add Streamlit frontend
-* Store vector database locally
 * Add reranking
+* Add metadata filtering
 * Deploy to cloud
 
 ---
