@@ -1,22 +1,23 @@
-RAG PDF Chatbot
+# RAG PDF Chatbot
 
-A beginner-to-intermediate Retrieval-Augmented Generation (RAG) project built using LangChain, FAISS, and Hugging Face embeddings.
+A beginner-friendly Retrieval-Augmented Generation (RAG) project using LangChain, FAISS, and Hugging Face embeddings.
 
-This project:
+---
 
-Loads PDF documents
-Splits text into chunks
-Creates embeddings
-Stores vectors in FAISS
-Retrieves relevant chunks using semantic similarity search
-Features
-PDF document loading
-Recursive text chunking
-Hugging Face embeddings
-FAISS vector database
-Semantic search retrieval
-Modular project structure
-Project Structure
+# Features
+
+* PDF document loading
+* Text chunking
+* Hugging Face embeddings
+* FAISS vector database
+* Semantic similarity search
+* Modular project structure
+
+---
+
+# Project Structure
+
+```bash
 RAG/
 │
 ├── app.py
@@ -33,25 +34,45 @@ RAG/
 │
 ├── requirements.txt
 └── README.md
-Technologies Used
-Python
-LangChain
-FAISS
-all-MiniLM-L6-v2
-Hugging Face Embeddings
-Installation
-1. Clone the Repository
+```
+
+---
+
+# Technologies Used
+
+* Python
+* LangChain
+* FAISS
+* Hugging Face Embeddings
+* Sentence Transformers
+
+---
+
+# Installation
+
+## Clone the Repository
+
+```bash
 git clone <your-repo-url>
 cd RAG
-2. Create Virtual Environment
-Windows
+```
+
+---
+
+## Create Virtual Environment
+
+### Windows
+
+```bash
 python -m venv venv
 venv\Scripts\activate
-3. Install Dependencies
-pip install -r requirements.txt
+```
 
-OR manually install:
+---
 
+## Install Dependencies
+
+```bash
 pip install langchain
 pip install langchain-community
 pip install langchain-huggingface
@@ -59,16 +80,33 @@ pip install langchain-text-splitters
 pip install sentence-transformers
 pip install faiss-cpu
 pip install pypdf
-Add Your PDF
+```
 
-Place your PDF inside the data/ folder.
+---
+
+# Add Your PDF
+
+Place your PDF file inside the `data` folder.
 
 Example:
 
+```bash
 data/ml_book.pdf
-Run the Project
+```
+
+---
+
+# Run the Project
+
+```bash
 python app.py
-Example Workflow
+```
+
+---
+
+# Workflow
+
+```text
 PDF
  ↓
 Document Loader
@@ -80,54 +118,58 @@ Embeddings
 FAISS Vector Store
  ↓
 Semantic Retrieval
-Example Query
+```
+
+---
+
+# Example Query
+
+```python
 query = "What is machine learning?"
+```
 
-The retriever searches semantically similar chunks from the PDF.
+---
 
-Example Output
+# Example Output
+
+```text
 Result 1:
 Machine learning is a field of artificial intelligence...
 
 Result 2:
 Supervised learning is a type of machine learning...
-Core Files
-loader.py
+```
 
-Loads PDF documents using PyPDFLoader.
+---
 
-splitter.py
+# Future Improvements
 
-Splits documents into smaller overlapping chunks.
+* Add LLM integration
+* Build chatbot interface
+* Add conversational memory
+* Add Streamlit frontend
+* Store vector database locally
+* Add reranking
+* Deploy to cloud
 
-embeddings.py
+---
 
-Creates Hugging Face embedding model.
-
-vectorstore.py
-
-Creates FAISS vector database.
-
-retriever.py
-
-Performs semantic similarity search.
-
-Future Improvements
-Add OpenAI/Groq LLM integration
-Build conversational memory
-Add Streamlit frontend
-Store vector DB locally
-Add hybrid search
-Add reranking
-Add metadata filtering
-Deploy using Docker or cloud platforms
-Learning Outcomes
+# Learning Outcomes
 
 This project helps understand:
 
-RAG architecture
-Vector embeddings
-Semantic search
-Chunking strategies
-Vector databases
-Modular AI application design
+* RAG architecture
+* Vector embeddings
+* Semantic search
+* Chunking strategies
+* Vector databases
+* Modular AI systems
+
+---
+
+# References
+
+* LangChain Documentation
+* FAISS Documentation
+* Hugging Face
+* Sentence Transformers
